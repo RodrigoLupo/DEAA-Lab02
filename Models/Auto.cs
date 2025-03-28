@@ -1,4 +1,6 @@
-﻿namespace Lab2_RodrigoLupo.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace Lab2_RodrigoLupo.Models;
 
 public class Auto<T>
 {

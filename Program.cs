@@ -1,9 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
@@ -14,6 +15,7 @@ if (!app.Environment.IsDevelopment())
     
     app.UseHsts();
 }
+app.UseCors("AllowAll");
 
 app.UseSwagger();
 app.UseSwaggerUI(options =>
